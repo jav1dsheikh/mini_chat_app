@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import 'home_screen.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key});
@@ -12,7 +13,7 @@ class _AppShellState extends State<AppShell> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    const Center(child: Text("Home Tab")),
+    const HomeScreen(),
     const Center(child: Text("Offers Tab")),
     const Center(child: Text("Settings Tab")),
   ];
