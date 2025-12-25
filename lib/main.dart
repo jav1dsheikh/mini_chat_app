@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screens/app_shell.dart';
+import 'theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,18 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AppShell(),
+      title: 'Mini Chat App',
+      theme: AppTheme.lightTheme,
+      home: const AppShell(),
     );
-  }
-}
-
-class AppShell extends StatelessWidget {
-  const AppShell({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('Mini Chat App')));
   }
 }
