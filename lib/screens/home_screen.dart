@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import 'tabs/users_tab.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
+      floatHeaderSlivers: true,
       headerSliverBuilder: (context, innerBoxIsScrolled) {
         return [
           SliverAppBar(
@@ -89,9 +91,9 @@ class _HomeScreenState extends State<HomeScreen>
       },
       body: TabBarView(
         controller: _tabController,
-        children: const [
-          Center(child: Text("Users List")),
-          Center(child: Text("Chat History")),
+        children: [
+          const UsersTab(),
+          const Center(child: Text("Chat History")),
         ],
       ),
     );

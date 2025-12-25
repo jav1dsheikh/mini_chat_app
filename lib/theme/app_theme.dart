@@ -13,6 +13,9 @@ class AppColors {
 
   static const Color border = Color(0xFFE0E0E0);
   static const Color unselectedItem = Colors.grey;
+
+  static const Color avatarGradientStart = Color(0xFF5B7FFF);
+  static const Color avatarGradientEnd = Color(0xFF9F5BFF);
 }
 
 class AppTheme {
