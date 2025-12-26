@@ -13,7 +13,14 @@ class User {
     required this.color,
     this.isOnline = false,
     this.lastSeen,
+    this.lastMessage,
+    this.lastMessageTime,
+    this.unreadCount = 0,
   });
+
+  final String? lastMessage;
+  final DateTime? lastMessageTime;
+  final int unreadCount;
 
   String get initials {
     if (name.isEmpty) return "";

@@ -16,6 +16,15 @@ class AppColors {
 
   static const Color avatarGradientStart = Color(0xFF5B7FFF);
   static const Color avatarGradientEnd = Color(0xFF9F5BFF);
+
+  static const Color onlineIndicator = Color(0xFF4CAF50); // Colors.green
+  static const Color chatAvatarGradientStart = Color(0xFF25D366);
+  static const Color chatAvatarGradientEnd = Color(0xFF0F9D58);
+  static const Color unreadBadge = Color(0xFF1A73E8);
+  static const Color tabBarShadow = Color.fromRGBO(0, 0, 0, 0.05);
+  static const Color tabBarBackground = Color(
+    0xFFEEEEEE,
+  ); // Colors.grey.shade200
 }
 
 class AppTheme {
