@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/chat_provider.dart';
+
 import '../../theme/app_theme.dart';
+import '../chat_screen.dart';
 
 class ChatHistoryTab extends StatefulWidget {
   const ChatHistoryTab({super.key});
@@ -176,7 +178,14 @@ class _ChatHistoryTabState extends State<ChatHistoryTab>
                             ),
                         ],
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ChatScreen(user: user),
+                          ),
+                        );
+                      },
                     ),
                     if (!isLast)
                       const Divider(

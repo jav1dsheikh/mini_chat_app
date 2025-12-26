@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/chat_provider.dart';
 import '../../theme/app_theme.dart';
+import '../chat_screen.dart';
 
 class UsersTab extends StatefulWidget {
   const UsersTab({super.key});
@@ -140,7 +141,14 @@ class _UsersTabState extends State<UsersTab>
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChatScreen(user: user),
+                        ),
+                      );
+                    },
                   );
                 }, childCount: users.length),
               ),
