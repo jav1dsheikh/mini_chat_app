@@ -7,6 +7,14 @@ import '../models/chat_message.dart';
 import '../theme/app_theme.dart';
 
 class ChatProvider extends ChangeNotifier {
+  final http.Client client;
+  final Duration replyDelay;
+
+  ChatProvider({
+    http.Client? client,
+    this.replyDelay = const Duration(seconds: 1),
+  }) : client = client ?? http.Client();
+
   final List<User> _users = [
     User(
       id: '1',
@@ -206,10 +214,10 @@ class ChatProvider extends ChangeNotifier {
     _isTyping = true;
     notifyListeners();
 
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(replyDelay);
 
     try {
-      final response = await http.get(
+      final response = await client.get(
         Uri.parse(
           'https://dummyjson.com/comments?limit=1&skip=${Random().nextInt(100)}',
         ),
@@ -245,7 +253,7 @@ class ChatProvider extends ChangeNotifier {
     if (cleanWord.isEmpty) return null;
 
     try {
-      final response = await http.get(
+      final response = await client.get(
         Uri.parse('https://api.dictionaryapi.dev/api/v2/entries/en/$cleanWord'),
       );
 
