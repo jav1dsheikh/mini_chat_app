@@ -1,16 +1,39 @@
-# mini_chat_application
+# Mini Chat App - Assignment
 
-A new Flutter project.
+## Completed Requirements
 
-## Getting Started
+### 1. Home & Navigation
+*   **3 Tabs**: Home (Active), Offers & Settings (Placeholder).
+*   **Sliver AppBar**: Floats on scroll up, hides on scroll down.
+*   **State**: Scroll positions preserved independently per tab.
 
-This project is a starting point for a Flutter application.
+### 2. Users Tab
+*   **List**: Scrollable mock user list.
+*   **Action**: Floating Button adds new users instantly.
 
-A few resources to get you started if this is your first Flutter project:
+### 3. Chat Screen
+*   **API**: Receiver messages fetched live from `dummyjson.com`.
+*   **Architecture**: "Newest-at-bottom" layout.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Bonus: Dictionary
+*   **Feature**: Long-press any word in chat.
+*   **Result**: Bottom sheet shows Definition & Phonetics (via Free Dictionary API).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+*   **Architecture**: MVVM with `Provider`.
+*   **Error Handling**: Graceful `SnackBars` for network/server failures.
+*   **Testing**: Full Unit & Widget test suite (4 passing tests).
+
+## Run Project
+
+
+```
+# Get Packages
+flutter pub get
+
+# Run Tests
+flutter test
+
+# Run App
+flutter run
+```

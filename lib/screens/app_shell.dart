@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
 import 'home_screen.dart';
@@ -40,18 +41,18 @@ class _AppShellState extends State<AppShell> {
           backgroundColor: Colors.transparent,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.chat_bubble_outline),
-              activeIcon: Icon(Icons.chat_bubble),
+              icon: Icon(CupertinoIcons.chat_bubble),
+              activeIcon: Icon(CupertinoIcons.chat_bubble),
               label: 'Home',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.local_offer_outlined),
-              activeIcon: Icon(Icons.local_offer),
+              activeIcon: Icon(Icons.local_offer_outlined),
               label: 'Offers',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings_outlined),
-              activeIcon: Icon(Icons.settings),
+              activeIcon: Icon(Icons.settings_outlined),
               label: 'Settings',
             ),
           ],
